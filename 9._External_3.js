@@ -1,0 +1,1 @@
+document.write("Corona Virus <br>");

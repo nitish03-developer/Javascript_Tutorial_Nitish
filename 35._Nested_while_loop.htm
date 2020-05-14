@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            while-loop
+        </title>
+        <script>
+            var i=0;
+            while(i<3)
+            {
+                document.write("<strong> Outer loop </strong>");
+                document.write(i);
+                document.write("<br>");
+                var j=0;
+                while(j<5)
+                {
+                    document.write("<strong> Inner loop </strong>");
+                    document.write(j);
+                    document.write("<br>");
+                    j++;
+                }
+                i++;
+            }
+        </script>
+    </head>
+</html>
