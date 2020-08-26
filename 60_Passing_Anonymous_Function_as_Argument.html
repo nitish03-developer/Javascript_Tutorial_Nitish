@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function As Argument</title>
+</head>
+<body>
+    <script>
+        // Passing Anonymous Function as Arguments
+        function disp(myfun)
+        {
+            return myfun();
+        }
+        document.write(disp(function(){
+            return "I am Anonymous Function";
+        }))
+    </script>
+</body>
+</html>

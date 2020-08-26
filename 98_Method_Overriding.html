@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method_Overriding</title>
+</head>
+<body>
+    <script>
+        // Function for inheritance
+        function extend(Child, Parent){
+            Child.prototype = Object.create(Parent.prototype);
+            Child.prototype.constructor = Child;
+        }
+
+        // Super class
+        var Mobile = function(){
+
+        }
+        // prototype Member
+        Mobile.prototype.show = function(){
+            return "Super Class Method";
+        }
+
+        // sub class
+
+        var Samsung = function(){
+
+        }
+        // sub class Samsug extending super class Mobile
+
+        extend(Samsung, Mobile);
+
+        Samsung.prototype.show =function(){
+            return "Sub class Method";
+        }
+
+        // Creating object of sub class Samsung
+        var sam = new Samsung();
+        var mob = new Mobile();
+        // Accessing super class properties model
+        //using sub class object
+
+        document.write(sam.show()+"<br>");
+        document.write(mob.show());
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Function</title>
+</head>
+<body>
+    <script>
+        function mobile()
+        {
+            return{
+                model:'Realme 9 Pro',
+                price:function(){
+                    return "Price Rs 8000";
+                }
+            };
+        }
+        var realme = mobile();
+        document.write(realme.model + " "+realme.price());
+    </script>
+</body>
+</html>

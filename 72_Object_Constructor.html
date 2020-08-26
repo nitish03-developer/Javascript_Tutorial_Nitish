@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+<body>
+    <script>
+        var fees = new Object();
+        fees['Nitish']= 500;
+        fees['Rahul']= 700;
+        fees['Prem']= 600;
+        fees['total']=function (){
+            return (500+900);
+        };
+        document.write(fees['Nitish']+"<br>");
+        document.write(fees['total']());
+    </script>
+</body>
+</html>

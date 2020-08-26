@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function with return statement</title>
+</head>
+<body>
+    <script>
+        /*var myfun = c => {return c;};
+        document.write(myfun(10));*/
+
+        /*var myfun2 = c => c;
+        document.write(myfun2(30));*/
+
+        /*
+          var myfun2 = c => c;   Working
+          var myfun2 = c => {c};   Not Working
+        */
+
+        var myfun2 = (a,b) => a+b;
+        document.write(myfun2(30,50));
+    </script>
+</body>
+</html>

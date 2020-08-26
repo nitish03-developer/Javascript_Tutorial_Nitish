@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //super class
+        var Mobile = function(){
+            this.a=10;
+        }
+
+        // prototype proerty of Mobile
+
+        Mobile.prototype.z=30;
+
+        // sub class
+
+        var Samsung = function(){
+            /* It calls Super class constructor and
+            initialize property without this you can 
+            no access super class prperties using sub
+            class object
+            */
+
+            Mobile.call(this);
+            this.b = 20;
+        }
+        var Galaxy = function(){
+            Samsung.call(this);
+            this.c = 100;
+        }
+
+        // Prototype inheritance
+
+        Samsung.prototype = Object.create(Mobile.prototype);
+        Samsung.prototype.constructor = Samsung;
+
+        Galaxy.prototype = Object.create(Samsung.prototype);
+        Galaxy.prototype.constructor = Galaxy;
+
+        var m = new Mobile();
+        var s = new Samsung();
+        var g = new Galaxy();
+
+        document.write("Galaxy object can access <br>");
+        document.write("Mobile A: "+ g.a+"<br>");
+        document.write("Samsung B: "+ g.b+"<br>");
+        document.write("Mobile Prototype Z: "+ g.z+"<br>");
+        document.write("Galaxy C: "+ g.c+"<br>");
+
+        document.write("*********************************************"+"<br>");
+
+        document.write("Samsung object can access <br>");
+        document.write("Mobile A: "+ s.a+"<br>");
+        document.write("Samsung B: "+ s.b+"<br>");
+        document.write("Mobile Prototype Z: "+ s.z+"<br>");
+        document.write("Galaxy C: "+ s.c+"<br>");
+
+
+        document.write("*********************************************"+"<br>");
+
+        document.write("Mobile object can access <br>");
+        document.write("Mobile A: "+ m.a+"<br>");
+        document.write("Samsung B: "+ m.b+"<br>");
+        document.write("Mobile Prototype Z: "+ m.z+"<br>");
+        document.write("Galaxy C: "+ m.c+"<br>");
+    </script>
+</body>
+</html>

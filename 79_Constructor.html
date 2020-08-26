@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor in Javascript</title>
+</head>
+<body>
+    <script>
+       function Mobile(){
+           this.model = 'Nokia 3110';
+           this.price = function(){
+               document.write(this.model + "Price Rs 3000");
+           }
+       } 
+       var Nokia = new Mobile();
+       var lg = new Mobile();
+       Nokia.price();
+       lg.price();
+    </script>
+</body>
+</html>

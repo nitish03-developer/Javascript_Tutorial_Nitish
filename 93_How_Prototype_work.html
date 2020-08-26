@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Prototype work</title>
+</head>
+<body>
+    <script>
+         function mobile(){
+
+         }
+         /*//document.write(mobile);
+         //console.log(mobile);
+         console.log(mobile.prototype);
+
+         var lg =new mobile();
+         console.log(lg.__proto__);
+
+         //verify
+         console.log(mobile.prototype === lg.__proto__);
+         console.log(mobile === lg.__proto__.constructor);
+         console.log(mobile === mobile.prototype.constructor);*/
+
+         function Mobile(){
+            this.a=20;
+         }
+         Mobile.prototype.a = 10;
+         var lg =new Mobile();
+         console.log(lg.a);
+    </script>
+</body>
+</html>

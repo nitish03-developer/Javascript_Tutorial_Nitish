@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Function with Parameter</title>
+</head>
+<body>
+    <script>
+        function mobile(model_no)
+        {
+            return{
+                model:model_no,
+                price: function(){
+                    return "Price is Rs 9000";
+                }
+            };
+        }
+        var realme = mobile('realme-9 Pro');
+        var oppo = mobile('opp x2');
+        document.write(realme.model+" "+realme.price()+"<br>");
+        document.write(oppo.model+" "+ oppo.price());
+    </script>
+</body>
+</html>

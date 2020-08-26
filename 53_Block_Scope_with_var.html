@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope</title>
+</head>
+<body>
+    <script>
+        function myvar()
+        {
+            var a=30;
+            if(true)
+            {
+                var a=50;
+                document.write(a+"<br>");
+            }
+            document.write(a+"<br>")
+        }
+        myvar();
+    </script>
+</body>
+</html>

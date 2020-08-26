@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Properties and Method</title>
+</head>
+<body>
+    <script>
+        var Mobile = function(model_no, sprice){
+            this.model = model_no;
+            this.color = 'white';
+            var price = 3000;  // Whenever we use var,let,const instead of this keyword then it is called private properties.
+            this.sp = sprice;
+            var show = function(){
+                return "Hello World";
+            };
+        };
+        var samsung = new Mobile('Galaxy', 2000);
+        var nokia = new Mobile('3310', 1000);
+        //document.write(nokia.price);
+        document.write(nokia.color);
+        //document.write(nokia.show());
+    </script>
+</body>
+</html>

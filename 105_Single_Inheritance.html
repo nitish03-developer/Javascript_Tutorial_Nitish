@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance in Javascript with class</title>
+</head>
+<body>
+    <script>
+        // Single Inheritance
+        class Father{
+            showFMoney(){
+                return "Father Money <br>";
+            }
+        }
+        class Son extends Father{
+            showSMoney(){
+                return "Son Money";
+            }
+        }
+        var s = new Son();
+        document.write(s.showFMoney());
+        document.write(s.showSMoney());
+    </script>
+</body>
+</html>

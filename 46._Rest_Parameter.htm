@@ -8,10 +8,11 @@
 <body>
     <script>
         // Rest Parameter
-        function show(a, ...args)
+        function show(a,b, ...args)
         {
             document.write(args+"<br>");
             document.write(a+"<br>");
+            document.write(b+"<br>");
             document.write(args[2]);
         }
         show(10,20,30,40,50 )

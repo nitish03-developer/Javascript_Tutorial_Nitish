@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For in loop in javascript</title>
+</head>
+<body>
+    <script>
+        function Mobile(model_no){
+            this.model = model_no;
+            this.price = 8000;
+            this.ram = '4GB';
+            this.fun = function(){
+                document.write(this.model+"this.price"+"<br>");
+            }
+        }
+        var samsung = new Mobile('Galaxy');
+        var nokia = new Mobile('Nokia 3110');
+
+        for(var keys in nokia)
+        {
+            if(typeof nokia[keys]!=='function'){
+                document.write(keys+" " +nokia[keys]+"<br>");
+            }
+            
+        }
+    </script>
+</body>
+</html>

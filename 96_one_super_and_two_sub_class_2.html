@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Super and Two Sub classes in Javascript</title>
+</head>
+<body>
+    <script>
+        // Function for Inheritance
+        function extend(child, parent){
+            child.prototype = Object.create(parent.prototype);
+            child.prototype.constructor = child;
+        }
+        //Super Class
+        var Mobile = function(){
+
+        }
+        // Prototype Method
+
+        Mobile.prototype.getModel = function(){
+            return this.model;
+        }
+
+        // sub class
+        var Samsung = function(model, price){
+            this.model = model;
+            this.price = price;
+        }
+
+        // sub class
+        var Lenovo = function(model){
+            this.model = model;
+        }
+
+        // Inheritance
+
+        extend(Samsung, Mobile);
+        extend(Lenovo, Mobile);
+
+        Samsung.prototype.getPrice = function(){
+            return this.price;
+        };
+
+        var galaxy = new Samsung('Galaxy', 3000);
+        var phab2 = new Lenovo('Phab 2');
+        console.log(galaxy.getModel());
+        console.log(phab2.getModel());
+        console.log(galaxy.getPrice());
+
+    </script>
+</body>
+</html>
